@@ -13,3 +13,5 @@ class MaterialTests(unittest.TestCase):
         self.assertNotIn([4,3,"p",-1], odd["grid"])
         self.assertNotEqual(even["grid"], maps["B",(5,6)]["grid"])
         self.assertIn([0,2], even["missing"])
+        self.assertEqual({name for name, _ in d["stencils"]["pq"]}, {"p", "q"})
+        self.assertIn([0,3,"pq",1], odd["grid"])
